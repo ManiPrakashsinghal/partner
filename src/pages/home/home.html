@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>DriverOnApp v1.2</ion-title>
+  </ion-navbar>
+</ion-header>
+
+ 
+  <ion-content>
+      <ion-item class="addressBar">
+          <ion-label floating>Enter Address</ion-label>
+          <ion-input id="txtHome" type="text"></ion-input>
+      </ion-item>
+  <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" ></agm-marker>
+  </agm-map>
+</ion-content>
+ 
+ 
+<ion-footer color="dark">
+    <button ion-button large block color="danger" *ngIf="dutyMode" (click)="offDuty()">Off Duty</button>
+    <button ion-button large block color="light" *ngIf= "!dutyMode" (click)="onDuty()">ON Duty</button>
+</ion-footer>

@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+        <ion-title>Booking Detail</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="card card-md">
+        <ion-item>
+            <ion-thumbnail item-start>
+                <img src="https://placeimg.com/100/100/people">
+            </ion-thumbnail>
+            <h2>{{TripDetail.clientName}}</h2>
+            <!--<h2>{{TripDetail.clientMobNo}}</h2>-->
+            <h2>{{TripDetail.clientAddress}}</h2>
+            
+            <p>{{TripDetail.tripType}} / {{TripDetail.carType}}</p>
+            <p>
+                <ion-icon name="star"></ion-icon>  4.5 Rating</p>
+				
+ 
+
+        </ion-item>
+
+
+
+        <ion-card-content class="card-content card-content-md">
+            <div class="card-subtitle">
+                <p><strong class="label">From :</strong>
+                {{TripDetail.pick_location}}</p>
+            </div>
+            <div class="card-subtitle">
+                <p><strong class="label">To :</strong>
+                {{TripDetail.drop_location}}</p>
+            </div>
+            <!-- <div class="card-title">
+                <h3>Location : </h3>
+                <p>Near AC Market</p>
+            </div> -->
+            <!-- <h3>Bill Details :</h3>
+             <p>Invoice Number :
+                <span class="float-right">CC0045-000013</span>
+            </p>  -->
+            <p>Start Journey Time :
+                <span class="float-right">{{TripDetail.start_time}}</span>
+            </p>
+            <p>End Journey Time :
+                <span class="float-right">{{TripDetail.end_time}}</span>
+            </p>
+            <p>Ride Hours Charges :
+                <span class="float-right">Rs. {{TripDetail.actualPrice}}</span>
+            </p>
+            <p>Discount :
+                <span class="float-right">Rs. {{TripDetail.discount}}</span>
+            </p>
+            <p>Night Charges :
+                <span class="float-right">Rs. {{TripDetail.night_charge}}</span>
+            </p>
+            <p>Driver Conveyance :
+                <span class="float-right">Rs. {{TripDetail.convPrice}}</span>
+            </p>
+            <p *ngIf="TripDetail.extra_charges !=  0" >Festival Extra Charges :
+                <span class="float-right">Rs. {{TripDetail.extra_charges}}</span>
+            </p>
+            <p>Total Bill :
+                <span class="float-right">Rs. {{TripDetail.total_fair}}</span>
+            </p>
+        </ion-card-content>
+		
+		 
+
+    </ion-card>
+</ion-content>

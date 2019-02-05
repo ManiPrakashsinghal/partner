@@ -1,0 +1,24 @@
+.input-wrapper ion-avatar{ text-align: center}
+.input-wrapper ion-avatar img{ 
+    width:100% !important;  display: inline-block;
+    height : 100% !important;  
+    max-width: 120px !important;  //any size
+    max-height: 120px !important; //any size 
+    border: .5rem solid #FFEB3B
+    }
+.profileImg{ background: rgb(248, 223, 1); margin-bottom:0}
+.profileImg ion-item{ background: #343434}
+.profileImg  { text-align:center}
+.profileImg h2{ margin: 10px 0; text-align: center;   font-size: 2rem; margin-bottom: 0 }
+ion-content{ background-color:#F5F5F5!important }
+.toolbar-background{ background: #1F1F1F!important}
+.profileImg h2,
+ion-navbar .bar-button{ color: #F5F5F5!important}
+.toolbar-title { color :rgb(248, 223, 1)!important}
+#mainMenu .menu-inner ion-content .scroll-content,
+.sliderNavigation{ background:#ffc61a!important}
+.sliderNavigation button{ background:none!important}
+.sliderNavigation button.item-md-danger{ background:#f53d3d!important }
+.sliderNavigation .label { color:#000}
+.sliderNavigation .item-md-danger .label { color:#fff}
+

@@ -1,0 +1,73 @@
+page-register {
+    
+ 
+	.background {
+		background-image: url(../assets/imgs/splash-driveronapp.png);
+	}
+
+	.scroll-content {
+		align-content: center;
+		//display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.0);
+		border-radius: 5px;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff!important;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+	.item {
+		margin-bottom: .2rem;
+		background: rgba(0, 0, 0, 0.5);
+		border: medium none;
+
+		.text-input {
+			color: #fff;
+		}
+
+		input::-moz-placeholder  {
+			color: #fff!important;
+		}
+
+		input:-moz-placeholder {
+			color: #fff!important;
+		}
+
+		*::-webkit-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-ms-input-placeholder  {
+			color: #fff!important;
+		}
+
+		*:-moz-placeholder  {
+			color: #fff!important;
+		}
+		.label{ color: #ffc61a}
+		
+	}
+	#registerFrm button{ margin-top: 2rem }
+
+	.icon {
+		padding-right: 10px;
+	}
+	
+	.bottom {
+		position: absolute;
+		bottom: 0;
+	}
+	#registerFrm{padding:10px}
+}

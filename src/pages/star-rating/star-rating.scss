@@ -1,0 +1,17 @@
+page-star-rating {
+    .starRating{ text-align: center; font-size: 4rem; padding-top:1rem; color: red}
+}
+
+ul {
+    padding: 0px;
+  
+    &.rating li {
+      padding: 5px 10px !important;
+      background: none;
+      color: #ffb400;
+  
+      ion-icon {
+        font-size: 30px;
+      }
+    }
+  }

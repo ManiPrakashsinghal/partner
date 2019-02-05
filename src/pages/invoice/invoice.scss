@@ -1,0 +1,10 @@
+page-invoice {
+    .card-md h1{ font-size: 3rem}
+    .input-wrapper{ color:gray}
+    ion-card-header{background:#FFC61A}
+    .groundTotal{ text-align: center}
+    .groundTotal p{ text-align: center;  float: none; font-size: 2rem; padding-top: 2rem}
+    .groundTotal h1{ text-align: center; float: none; font-size: 4rem}
+    .item > ion-icon{color:#FFC61A} 
+    .card-md .item-md.item-block .item-inner{margin-left: 5px;}
+}

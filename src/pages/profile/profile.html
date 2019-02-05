@@ -1,0 +1,64 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <!-- <img src="https://placeimg.com/700/400/people"> -->
+    <img src="assets/imgs/profileImage.jpg">
+    <div class="card-title">Mr. {{profileObj.first_name}} {{profileObj.last_name}}</div>
+    <!-- <div class="card-subtitle">28 Listings</div> -->
+  </ion-card>
+
+  <ion-list>
+    <ion-item>
+      <h2>First Name</h2>
+      <p>{{profileObj.first_name}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Second Name</h2>
+      <p>{{profileObj.last_name}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Email</h2>
+      <p>{{profileObj.email_id}}</p>
+    </ion-item>
+    <!-- <ion-item>
+      <h2>New Pasword</h2>
+      <p>Enter New Current Password</p>
+    </ion-item>
+    <ion-item>
+      <h2>Confirm New Pasword</h2>
+      <p>Enter Cunfirm New Password</p>
+    </ion-item> -->
+    <ion-item>
+      <h2>Number</h2>
+      <p>{{profileObj.mobile_no}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Address</h2>
+      <p>{{profileObj.address}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>PIN Code</h2>
+      <p>{{profileObj.zip_code}}</p>
+    </ion-item>
+    <ion-item>
+      <h2>Driving Licence Number</h2>
+      <p>{{profileObj.licance_no}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
