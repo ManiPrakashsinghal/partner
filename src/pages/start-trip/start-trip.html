@@ -24,38 +24,34 @@
 
 <ion-content>
     <ion-card class="card card-md">
-        <ion-item>
+        <ion-item  class="outerClientDetail">
             <ion-thumbnail item-start>
-                <img src="https://placeimg.com/100/100/people">
+                <img src="assets/imgs/profileImage.jpg">
             </ion-thumbnail>
-            <h2>{{TripDetail.clientName}} </h2>
-            <h2>{{TripDetail.clientMobNo}}</h2>
+            <ion-item class="clientDetail">
+                <h2>{{TripDetail.clientName}} </h2>
+                <h2>{{TripDetail.clientMobNo}} </h2>
+                <ion-thumbnail item-end>
+                    <button ion-fab color="light">
+                        <ion-icon name="call" (click)="callInNumber(TripDetail.clientMobNo)"></ion-icon>
+                    </button>
+                </ion-thumbnail>
+            </ion-item>
             <h2 class="addressParty">{{TripDetail.clientAddress}} </h2>
-            <p  class="tripDetail">{{TripDetail.tripType}} / {{TripDetail.carType}}</p>
+            <p class="tripDetail">{{TripDetail.tripType}} / {{TripDetail.carType}}</p>
             <p class="starRating">
-                <ion-icon name="star"></ion-icon> 4.5 Rating</p>
-				
-<ion-fab right bottom>
-<button ion-fab color="light"  >
-   <ion-icon name="call" (click)="callInNumber(TripDetail.clientMobNo)"></ion-icon>
-</button>  
-</ion-fab>
+                <ion-icon name="star"></ion-icon> 4.5 Rating
+            </p>
         </ion-item>
         <ion-card-content class="card-content card-content-md">
             <div class="card-subtitle" (click)="startNavigationDes();">
                 <h2>From :</h2>
                 <p>{{TripDetail.pick_location}}</p>
-               <!-- <ion-icon ios="ios-walk" md="md-walk"></ion-icon>-->
             </div>
-             <div class="card-subtitle" (click)="startNavigation();">
+            <div class="card-subtitle" (click)="startNavigation();">
                 <h2>To :</h2>
                 <p>{{TripDetail.drop_location}}</p>
-                <!--<ion-icon ios="ios-walk" md="md-walk"></ion-icon>-->
             </div>
-            <!-- <div class="card-title">
-                <h2>Location : </h2>
-                <p>Near AC Market</p>
-            </div> -->
         </ion-card-content>
     </ion-card>
     <ion-item class="addressBar">
@@ -67,13 +63,16 @@
     </agm-map>
 </ion-content>
 <ion-footer color="dark">
-        <!-- <h4>Total Time: {{TotalRideTimeShow}}</h4> -->
     <button *ngIf="step_1" ion-button large block color="light" (click)="goToTrip()">
-        <ion-icon name="navigate" item-start></ion-icon>Tap When Started</button>
+        <ion-icon name="navigate" item-start></ion-icon>Tap When Started
+    </button>
     <button *ngIf="step_2" ion-button large block color="light" (click)="updateArrivedTime()">
-        <ion-icon name="paper-plane" item-start></ion-icon>Tap When Arrived</button>
+        <ion-icon name="paper-plane" item-start></ion-icon>Tap When Arrived
+    </button>
     <button *ngIf="step_3" ion-button large block color="light" (click)="updateStartTime()">
-        <ion-icon name="car" item-start></ion-icon>Start Trip</button>
+        <ion-icon name="car" item-start></ion-icon>Start Trip
+    </button>
     <button *ngIf="step_4" ion-button large block color="light" (click)="endTrip()">
-        <ion-icon name="car" item-start></ion-icon>End Trip</button>
+        <ion-icon name="car" item-start></ion-icon>End Trip
+    </button>
 </ion-footer>

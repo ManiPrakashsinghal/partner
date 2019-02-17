@@ -12,6 +12,10 @@ page-start-trip {
     .card-subtitle p,
     .card-title p{ width: 80vw;}
     .starRating{ color: red}
-	.addressParty{ color:#9E9E9E;}
-	 .tripDetail{padding: .5rem;    text-transform: uppercase;    background: #f1f1f1;    border: 1px solid #ccc; margin:.5rem}
+  .addressParty{ color:#9E9E9E;}
+  .outerClientDetail .label-md{ margin-top: .5rem}
+   .tripDetail{padding: .5rem;    text-transform: uppercase;    background: #f1f1f1;    border: 1px solid #ccc; margin:.5rem}
+   .clientDetail{ padding-left:.5rem}
+   .clientDetail ion-thumbnail{ min-height: auto; min-width: auto; float:right}
+   .clientDetail > .item-inner{ padding: 0}
 }
