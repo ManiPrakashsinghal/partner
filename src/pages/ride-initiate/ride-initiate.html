@@ -5,49 +5,41 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
         </button>
-    <ion-title>Ride Initiate</ion-title>
-  </ion-navbar>
-
+        <ion-title>Ride Initiate</ion-title>
+    </ion-navbar>
 </ion-header>
-
-
 <ion-content>
     <ion-card class="card card-md">
         <ion-item>
             <ion-thumbnail item-start>
-                <img src="https://placeimg.com/700/400/people">
+                <img src="assets/imgs/profileImage.jpg">
             </ion-thumbnail>
-            <h2>{{TripDetail.clientName}} </h2>
-            <h2>{{TripDetail.clientMobNo}} </h2>
+
+            <ion-item class="clientDetail">
+                <h2>{{TripDetail.clientName}} </h2>
+                <h2>{{TripDetail.clientMobNo}} </h2>
+                <ion-thumbnail item-end>
+                    <button ion-fab color="light">
+                        <ion-icon name="call" (click)="callInNumber(TripDetail.clientMobNo)"></ion-icon>
+                    </button>
+                </ion-thumbnail>
+            </ion-item>
             <h2 class="addressParty">{{TripDetail.clientAddress}} </h2>
-            <p  class="tripDetail">{{TripDetail.tripType}} / {{TripDetail.carType}}</p>
+            <p class="tripDetail">{{TripDetail.tripType}} / {{TripDetail.carType}}</p>
             <p class="starRating">
-                <ion-icon name="star"></ion-icon>  4.5 Rating</p>
-				
-				
-<ion-fab right bottom>
-  
-<button ion-fab color="light"  >
-   <ion-icon name="call" (click)="callInNumber(TripDetail.clientMobNo)"></ion-icon>
-</button>  
-                      
-</ion-fab>
-
+                <ion-icon name="star"></ion-icon> 4.5 Rating
+            </p>
         </ion-item>
-
-
-
         <ion-card-content class="card-content card-content-md">
             <div class="card-subtitle">
                 <h2>From :</h2>
                 <p>{{TripDetail.pick_location}}</p>
             </div>
-             <div class="card-subtitle">
+            <div class="card-subtitle">
                 <h2>To :</h2>
                 <p>{{TripDetail.drop_location}}</p>
             </div>
@@ -55,12 +47,9 @@
                 <h2>Location : </h2>
                 <p>Near AC Market</p>
             </div>  -->
-             
         </ion-card-content>
     </ion-card>
 </ion-content>
-
- 
 <ion-footer color="dark">
     <button ion-button large block color="light" (click)="nextPage()">Ride Initiate</button>
-  </ion-footer>
+</ion-footer>
