@@ -78,7 +78,8 @@ import { TripDirectionPage } from '../pages/trip-direction/trip-direction';
     IonicStorageModule .forRoot(),
     Ionic2RatingModule,
     AgmCoreModule.forRoot({
-          apiKey: "AIzaSyCnahpwY4LRTYlzEHnER3B_Y8NR1HzmrVE",
+          //apiKey: "AIzaSyCnahpwY4LRTYlzEHnER3B_Y8NR1HzmrVE",
+          apiKey: "AIzaSyCU3MooMxfcSusLCB_loPk8Wh6nV0imWZA",
           libraries: ["places"]
       })
   ],
